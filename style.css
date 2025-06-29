@@ -1,3 +1,5 @@
+/*------------------------------ CSS definitions ------------------------------*/
+
 :root {
   /* Colors */
   --color-1: hsl(263, 55%, 52%); /* #733FC8 */
@@ -48,8 +50,8 @@
   --shadow-2: 0rem 0rem 0rem 0.125rem; /* 0px 0px 0px 2px */
 
   /* Opacity */
-  --opacity-1: 0.8;
-  --opacity-2: 0.9;
+  --opacity-1: 0.5;
+  --opacity-2: 0.7;
   --opacity-3: 1;
 }
 
@@ -68,6 +70,8 @@
   font-display: swap;
   font-weight: 600;
 }
+
+/*-------------------------------- CSS resets ---------------------------------*/
 
 /* Box sizing rules */
 *,
@@ -110,4 +114,133 @@ h2 {
 img {
   max-width: 100%;
   display: block;
+}
+
+/*------------------------------- Main stylings -------------------------------*/
+
+body {
+  font-family: "BarlowSemiCondensed";
+  background-color: var(--color-7);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+blockquote {
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.text-style-1 {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+  font-weight: var(--font-weight-medium);
+}
+
+.text-style-2 {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  font-weight: var(--font-weight-medium);
+  opacity: var(--opacity-1);
+}
+
+.text-style-3 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.text-style-4 {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+  opacity: var(--opacity-2);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.section-1 {
+  display: flex;
+  gap: var(--space-base);
+
+  img {
+    border-radius: var(--border-radius-round);
+  }
+}
+
+.flex-column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs-2);
+}
+
+.flex-column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s-2);
+}
+
+.flex-column-3 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m-1);
+}
+
+.card-layout-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l-1);
+  max-width: 20.4375rem; /* 327px */
+}
+
+.card-1,
+.card-4 {
+  .section-1 img {
+    border: var(--border-width-m) solid var(--color-6);
+  }
+}
+
+.card {
+  padding: var(--space-l-2) var(--space-xl-1) var(--space-xl-1);
+  border-radius: var(--border-radius-soft);
+  opacity: var(--opacity-3);
+  box-shadow: var(--shadow-1);
+}
+
+.card-1 {
+  background-color: var(--color-1);
+}
+
+.card-2 {
+  background-color: var(--color-2);
+}
+
+.card-3 {
+  background-color: var(--color-3);
+}
+
+.card-4 {
+  background-color: var(--color-4);
+}
+
+.card-1,
+.card-2,
+.card-4 {
+  color: var(--color-3);
+}
+
+.card-3 {
+  color: var(--color-2);
 }
