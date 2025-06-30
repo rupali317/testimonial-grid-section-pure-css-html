@@ -127,7 +127,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* RRC: Check if there is a better approach */
+  height: 100%; /* RRC: Check if there is a better approach */
 }
 
 blockquote {
@@ -260,6 +260,10 @@ blockquote {
 }
 
 @media (min-width: 48rem) {
+  main {
+    height: 100vh;
+  }
+
   .card-layout-1 {
     display: grid;
     column-gap: var(--space-l-3);
