@@ -50,9 +50,8 @@
   --shadow-2: 0rem 0rem 0rem 0.125rem; /* 0px 0px 0px 2px */
 
   /* Opacity */
-  --opacity-1: 0.5;
-  --opacity-2: 0.7;
-  --opacity-3: 1;
+  --opacity-1: 0.8;
+  --opacity-2: 1;
 }
 
 @font-face {
@@ -159,7 +158,7 @@ blockquote {
   font-size: var(--font-size-s);
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-medium);
-  opacity: var(--opacity-2);
+  opacity: var(--opacity-1);
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -217,7 +216,7 @@ blockquote {
 .card {
   padding: var(--space-l-2) var(--space-xl-1) var(--space-xl-1);
   border-radius: var(--border-radius-soft);
-  opacity: var(--opacity-3);
+  opacity: var(--opacity-2);
   box-shadow: var(--shadow-1);
 }
 
